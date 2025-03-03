@@ -96,10 +96,18 @@ class Tools:
             else:
                 c = CurrencyConverter(ECB_URL)
         except Exception as e:
-            return (
-                "Error: Problem initializing conversion utility.\n===============================================\n"
-                + str(e)
-            )
+            try:
+                # Try fallback built-in data
+                c = CurrencyConverter()
+            except Exception as e2:
+                return (
+                    "Error: Problem initializing conversion utility.\n===============================================\n"
+                    + "1st Error:\n"
+                    + str(e)
+                    + "\n"
+                    + "2nd Error:\n"
+                    + str(e2)
+                )
         source_code = None
         target_code = None
         if direction == Direction.A_TO_B:
