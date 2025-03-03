@@ -5,7 +5,7 @@ author_url: https://github.com/freerainboxbox
 git_url: https://github.com/freerainboxbox/owui-currency-tool
 description: Enables basic fetching of forex data for live and historic currency conversion.
 requirements: currencyconverter
-version: 0.0.1
+version: 0.0.2
 """
 
 from currency_converter import CurrencyConverter, ECB_URL, SINGLE_DAY_ECB_URL
@@ -35,7 +35,7 @@ class Tools:
         __init__: Initializes the Tool with default settings or provided configurations.
     """
 
-    class Valves(BaseModel):
+    class UserValves(BaseModel):
         """
         This inner class defines the configurable parameters, or "valves", that can be adjusted
         by admins in the Open WebUI interface. It includes a default currency for conversions.
