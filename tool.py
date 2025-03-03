@@ -94,7 +94,7 @@ class Tools:
             if date is None:
                 c = CurrencyConverter(SINGLE_DAY_ECB_URL)
             else:
-                c = CurrencyConverter(date)
+                c = CurrencyConverter(ECB_URL)
         except Exception as e:
             return (
                 "Error: Problem initializing conversion utility.\n===============================================\n"
