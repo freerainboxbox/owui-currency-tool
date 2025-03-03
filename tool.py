@@ -5,12 +5,12 @@ author_url: https://github.com/freerainboxbox
 git_url: https://github.com/freerainboxbox/owui-currency-tool
 description: Enables basic fetching of forex data for live and historic currency conversion.
 requirements: currencyconverter
-version: 0.0.2
+version: 0.0.3
 """
 
 from currency_converter import CurrencyConverter, ECB_URL, SINGLE_DAY_ECB_URL
 from pydantic import BaseModel, Field
-from typing import String, Optional, Type
+from typing import Optional, Type
 from enum import Enum
 from datetime import date
 
